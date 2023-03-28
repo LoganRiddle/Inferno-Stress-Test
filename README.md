@@ -1,7 +1,7 @@
 # Inferno-Stress-Test
 ## Description
 
-![alt text](https://github.com/LoganRiddle/Inferno-Stress-Test/edit/main/Inferno.png "App Image")
+![alt text](https://github.com/LoganRiddle/Inferno-Stress-Test/blob/main/src/images/Inferno.png "App Image")
 
 A simple non-graphical stress test application for testing processors through file writes. 
 
