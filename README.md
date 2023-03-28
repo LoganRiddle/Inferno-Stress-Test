@@ -4,4 +4,6 @@ A simple non-graphical stress test application for testing processors through fi
 
 ## Installation
 #### Fedora Installtion:
-To install you must first enable the repository using `dnf copr enable loganriddlewc/inferno-stress-test`
+1. To install you must first enable the repository using `dnf copr enable loganriddlewc/inferno-stress-test`. 
+
+2. Using the dnf package manager, just install the application with `dnf install inferno-stress-test`.
