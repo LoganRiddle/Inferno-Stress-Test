@@ -4,7 +4,7 @@
 #include <time.h>
 #include <unistd.h>
 
-//#define SZ 5000
+#define SZ 7500
 
 
 // Global Variables
@@ -54,7 +54,7 @@ void* short_test(void){
 			count += 1;
        		}
     	}
-	
+
 	double awps = count/elapsed;
 	printf("\nAverage Write Speed: %.02f writes per second\n", awps);
 	printf("Short Test Ended Successfully\n");
@@ -183,16 +183,16 @@ int main(void){
 	printf("Welcome to Inferno\n");
 	printf("\nChoose which test to run:\n");
 	printf("=========================\n");
-	printf("(short) (normal) (extended)\n");
+	printf("a.) (short) \nb.) (normal) \nc.) (extended)\n\n");
 
 	scanf("%s", userin);
 	printf("\n");
 
-	if(strcmp(userin, "short") == 0){
+	if(strcmp(userin, "short") == 0 || strcmp(userin, "a") == 0 || strcmp(userin, "A") == 0){
 		short_test();
-	}else if(strcmp(userin, "normal") == 0){
+	}else if(strcmp(userin, "normal") == 0 || strcmp(userin, "b") == 0 || strcmp(userin, "B") == 0){
 		normal_test();
-	}else if(strcmp(userin, "extended") == 0){
+	}else if(strcmp(userin, "extended") == 0 || strcmp(userin, "c") == 0 || strcmp(userin, "C") == 0){
 		extended_test();
 	}else{
 		printf("Error: userinput not matching options.");
