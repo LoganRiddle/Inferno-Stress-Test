@@ -207,4 +207,4 @@ $ sudo dnf install ~/rpmbuild/RPMS/noarch/hello-0.0.1-1.el8.noarch.rpm
 It can alternately be installed with the rpm command directly:
 ```
 $ sudo rpm -ivh ~/rpmbuild/RPMS/noarch/hello-0.0.1-1.el8.noarch.rpm
-'''
+```
