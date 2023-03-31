@@ -18,7 +18,7 @@ A simple non-graphical stress test application for testing processors through fi
 
 ## Building RPM Packages:
 
-###Installing Necessary Tools: 
+### Installing Necessary Tools: 
 The following packages need to be installed to build the RPM package:
 ```
 $ sudo dnf install -y rpmdevtools rpmlint
@@ -182,8 +182,29 @@ The flags -bb have the following meanings:
 Use -ba to build both.
 
 After the build process is finished, you have the following directory structure:
-
 ```
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     1,1           Top
+$ tree ~/rpmbuild/
+/home/tux/rpmbuild/
+├── BUILD
+│   └── hello-0.0.1
+│       ├── hello.sh
+├── BUILDROOT
+├── RPMS
+│   └── noarch
+│       └── hello-0.0.1-1.el8.noarch.rpm
+├── SOURCES
+│   └── hello-0.0.1.tar.gz
+├── SPECS
+│   └── hello.spec
+└── SRPMS
+```
 
-
+Installing the RPM package
+After a successful build of the package, you can install the RPM package using the dnf command:
+```
+$ sudo dnf install ~/rpmbuild/RPMS/noarch/hello-0.0.1-1.el8.noarch.rpm
+```
+It can alternately be installed with the rpm command directly:
+```
+$ sudo rpm -ivh ~/rpmbuild/RPMS/noarch/hello-0.0.1-1.el8.noarch.rpm
+'''
