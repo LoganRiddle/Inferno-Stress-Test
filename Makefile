@@ -6,6 +6,10 @@ debug:
 	gcc ./src/inferno.c ./src/cpu.c ./src/cleanup.c ./src/test.c ./src/score.c -o debug.out
 	@echo "debug.out ready to be run"
 
+#Feature is still being tested, DO NOT USE!!!!!!
+build-rpm:
+	rpmbuild -ba ~/rpmbuild/SPECS/inferno.spec
+
 clean:
 	rm debug.out
 	@echo "All Clean!"
