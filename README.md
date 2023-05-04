@@ -1,6 +1,6 @@
 # Inferno-Stress-Test
 
-![alt text](https://github.com/LoganRiddle/Inferno-Stress-Test/blob/main/src/images/Screenshot%20from%202023-04-28%2016-37-47.png "App Image")
+![alt text](https://github.com/LoganRiddle/Inferno-Stress-Test/blob/main/images/Screenshot%20from%202023-04-28%2016-37-47.png "App Image")
 
 ## Description
 A simple non-graphical stress test application for testing processors through file writes. The build is currently very early on and is in development with plans to add a gui version as well. The application is entirely written in c and all code can be found withing the `/src/` directory. 
