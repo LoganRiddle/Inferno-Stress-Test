@@ -9,10 +9,10 @@ echo "$current_distro"
 echo "$close_distro"
 
 if [ "$close_distro" = "debian" ]; then
-	cp ./inferno-stress-test-0.0.4/inferno-stress-test /usr/env/bin/
+	cp ./inferno-stress-test-0.0.4/inferno-stress-test /usr/bin/
 
 elif [ "$close_distro" != "debian" ]; then
-	cp ./inferno-stress-test-0.0.4/inferno-stress-test /usr/env/bin/
+	cp ./inferno-stress-test-0.0.4/inferno-stress-test /usr/bin/
 fi
 
 echo "Install Complete!"
