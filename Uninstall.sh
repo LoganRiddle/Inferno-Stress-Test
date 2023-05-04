@@ -15,4 +15,4 @@ elif [ "$close_distro" != "debian" ]; then
 	sudo rm /usr/bin/inferno-stress-test
 fi
 
-echo "Install Complete!"
+echo "Uninstall Complete!"
