@@ -35,7 +35,9 @@ A simple non-graphical stress test application for testing processors through fi
 
 #### Finalize 
 
-* The `make finalize` command generates an executable in the `Inferno-Stress-Test-<Version Number>` directory for easy packaging when ready to rollout the next release
+* The `make finalize` command generates an executable in the `Inferno-Stress-Test-<Version Number>` directory 
+
+* The purpose of this is for easy packaging when ready to rollout the next release
 
 #### Clean
 
