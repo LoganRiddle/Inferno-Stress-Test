@@ -24,3 +24,19 @@ A simple non-graphical stress test application for testing processors through fi
 3. Using the `Install.sh` script, the executable will be install in the `/usr/bin/` directory. 
 
 4. An uninstall script is also provided which removes the executable from that location `Uninstall.sh` 
+
+## How to use the Makefile
+
+#### Debug 
+
+* The `make debug` command generates an executable in the current directory called `debug.out` 
+
+* This is for testing purposes to make it as easy as possible to make changes on the fly
+
+#### Finalize 
+
+* The `make finalize` command generates an executable in the `Inferno-Stress-Test-<Version Number>` directory for easy packaging when ready to rollout the next release
+
+#### Clean
+
+* The `make clean` command removes a `debug.out` executable if applicable 
