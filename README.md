@@ -27,18 +27,18 @@ A simple non-graphical stress test application for testing processors through fi
 
 ## How to use the Makefile
 
-#### Debug 
+#### Debug:
 
 * The `make debug` command generates an executable in the current directory called `debug.out` 
 
 * This is for testing purposes to make it as easy as possible to make changes on the fly
 
-#### Finalize 
+#### Finalize: 
 
 * The `make finalize` command generates an executable in the `Inferno-Stress-Test-<Version Number>` directory 
 
 * The purpose of this is for easy packaging when ready to rollout the next release
 
-#### Clean
+#### Clean:
 
 * The `make clean` command removes a `debug.out` executable if applicable 
