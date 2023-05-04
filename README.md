@@ -19,6 +19,8 @@ A simple non-graphical stress test application for testing processors through fi
 #### Debian Based Systems Installtion:
 1. To install on Debian based systems, you must first clone the github repository using `git clone https://github.com/LoganRiddle/Inferno-Stress-Test`
 
-2. Using the `Install.sh` script, the executable will be install in the `/usr/bin/` directory. 
+2. Change directory to the repository directory using `cd Inferno-Stress-Test`
 
-3. An uninstall script is provided which removes the executable from that location `Uninstall.sh` 
+3. Using the `Install.sh` script, the executable will be install in the `/usr/bin/` directory. 
+
+4. An uninstall script is provided which removes the executable from that location `Uninstall.sh` 
