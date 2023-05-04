@@ -15,3 +15,10 @@ A simple non-graphical stress test application for testing processors through fi
 1. To install you must first enable the repository using `yum copr enable loganriddlewc/inferno-stress-test`.
 
 2. Using the yum package manager, just install the application with `yum install inferno-stress-test`.
+
+#### Debian Based Systems Installtion:
+1. To install on Debian based systems, you must first clone the github repository using `git clone https://github.com/LoganRiddle/Inferno-Stress-Test`
+
+2. Using the `Install.sh` script, the executable will be install in the `/usr/bin/` directory. 
+
+3. An uninstall script is provided which removes the executable from that location `Uninstall.sh` 
