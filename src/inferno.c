@@ -4,11 +4,14 @@
 #include <string.h>
 
 
-// Global Variables 
+// Function deginitions 
 float test(int length);
 int score(float wps);
 int cpu_info(void);
 int cleanup(void);
+
+
+// Global Variables
 
 
 int main(void){
@@ -34,11 +37,11 @@ int main(void){
 
 	// Conditional section to determine what test the user wants to run
 	if(strcmp(userin, "Short") == 0 || strcmp(userin, "short") == 0 || strcmp(userin, "a") == 0 || strcmp(userin, "A") == 0){
-		length = 4;
+		length = 5;
 		wps = test(length);
 		final_score = score(wps);
 	}else if(strcmp(userin, "Normal") == 0 || strcmp(userin, "normal") == 0 || strcmp(userin, "b") == 0 || strcmp(userin, "B") == 0){
-		length = 2;
+		length = 3;
 		wps = test(length);
 		final_score = score(wps);
 	}else if(strcmp(userin, "Extended") == 0 || strcmp(userin, "extended") == 0 || strcmp(userin, "c") == 0 || strcmp(userin, "C") == 0){
@@ -46,7 +49,7 @@ int main(void){
 		wps = test(length);
 		final_score = score(wps);
 	}else{
-		printf("Error: userinput not matching options.\nInput detected: %s", userin);
+		printf("Error: user input not matching options.\nInput detected: %s", userin);
 		exit(EXIT_FAILURE);
 	}
 	

@@ -22,5 +22,5 @@ int score(float wps){
     	
 	fclose(test_file);
 
-	return (int)(count/wps);
+	return (int)(wps/count);
 }

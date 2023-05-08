@@ -6,13 +6,13 @@
 #include <unistd.h>
 
 // Test size macro
-#define SZ 7500
+#define SZ 2500
 
 // Global Variables
 float A[SZ][SZ];
 
 
-int test(int length){	
+float test(int length){	
 	// Local variables 
 	time_t start, current;
 	time(&start);
@@ -26,10 +26,15 @@ int test(int length){
 	char str[100];
 	int test_length = 0;
 
+	// Temp related variables
+	float systemp, millideg;
+	FILE *thermal;
+	int n;
+
 	// Creates the test file
 	FILE* test_file = fopen(".inferno_test.txt", "w");
 
-	// Checks if the file exists or fails to open
+		// Checks if the file exists or fails to open
 	if (test_file == NULL) {
     		printf("Error: unable to open file test.txt\n");
     		exit(EXIT_FAILURE);
@@ -38,9 +43,9 @@ int test(int length){
 	// Conditional section that determines which test length the user chose
 	if(length == 1){
 		test_length = SZ/length;
-	}else if(length == 2){
+	}else if(length == 3){
 		test_length = SZ/length;
-	}else if(length == 4){
+	}else if(length == 5){
 		test_length = SZ/length;
 	}else{
 		exit(EXIT_FAILURE);
@@ -65,8 +70,13 @@ int test(int length){
 			// Metric for user output
 			wps = count/elapsed;
 
+			thermal = fopen("/sys/class/thermal/thermal_zone0/temp","r");
+			n = fscanf(thermal,"%f",&millideg);
+			fclose(thermal);
+			systemp = millideg / 1000;
+
     			// Print the elapsed time
-    			printf("Elapsed time: %.0f seconds. Write speed: %.02f writes per second\r", elapsed, wps);
+    			printf("Elapsed time: %.0f seconds. Write speed: %.02f writes per second. Current CPU Temp: %.02f Degrees Celsius\r", elapsed, wps, systemp);
 			fflush(stdout);
 			
 			// Write operation to the test file
@@ -81,6 +91,6 @@ int test(int length){
 	printf("\nAverage Write Speed: %.02f writes per second\n", awps);
 	printf("Short Test Ended Successfully\n");
 
-	return 0;
+	return wps;
 }
 
