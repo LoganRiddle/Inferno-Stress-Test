@@ -34,7 +34,7 @@ float test(int length){
 	// Creates the test file
 	FILE* test_file = fopen(".inferno_test.txt", "w");
 
-		// Checks if the file exists or fails to open
+	// Checks if the file exists or fails to open
 	if (test_file == NULL) {
     		printf("Error: unable to open file test.txt\n");
     		exit(EXIT_FAILURE);
@@ -70,6 +70,7 @@ float test(int length){
 			// Metric for user output
 			wps = count/elapsed;
 
+			// Reads CPU temps and presents it in celius 
 			thermal = fopen("/sys/class/thermal/thermal_zone0/temp","r");
 			n = fscanf(thermal,"%f",&millideg);
 			fclose(thermal);
