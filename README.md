@@ -3,7 +3,7 @@
 ![alt text](https://github.com/LoganRiddle/Inferno-Stress-Test/blob/main/images/Screenshot%20from%202023-04-28%2016-37-47.png "App Image")
 
 ## Description
-A simple non-graphical stress test application for testing processors through file writes. The build is currently very early on and is in development with plans to add a gui version as well. The application is entirely written in c and all code can be found withing the `/src/` directory. The test has a scoring system that relates time taken to complete the test to the number of lines written to the test file during the test. The test also displays core CPU tempature to the user to be monitored as needed. 
+A simple non-graphical stress test application for testing systems through file writes. The build is currently very early on and is in development with plans to add a gui version as well. The application is entirely written in c and all code can be found withing the `/src/` directory. The test has a scoring system that relates time taken to complete the test to the number of lines written to the test file during the test. The test also displays core CPU tempature to the user to be monitored as needed. 
 
 ## Installation
 #### Fedora Installation:
