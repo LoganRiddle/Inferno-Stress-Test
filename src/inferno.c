@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <gtk/gtk.h>
 
 
 // Function deginitions 
@@ -10,20 +11,32 @@ int score(float wps);
 int cpu_info(void);
 int cleanup(void);
 
+// GUI Functions 
+void greet(GtkWidget* widget, gpointer data);
+void destroy(GtkWidget* widget, gpointer data);
+int sub(int argc, char* argv[]);
 
 // Global Variables
 
 
-int main(void){
+int main(int argc, char* argv[]){
 	char userin[100];
+	char gui[100];
 	int length = 0;
 	int final_score;
 	float wps;
 
 	// Cleans up the terminal 
 	system("clear");
-	//system("lscpu");
-	//system("cat /proc/cpuinfo | grep processor | wc -l");	
+	
+	printf("Launch GUI?(N/y): ");
+	scanf("%s", gui);
+
+	if((strcmp(gui, "y") == 0) || (strcmp(gui, "Y") == 0)){
+		sub(int argc, char* argv[]);
+	} 
+	
+	system("clear");
 
 	// Builds terminal interface with 	
 	printf("Welcome to Inferno\n");
