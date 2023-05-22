@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <gtk/gtk.h>
+//#include <gtk/gtk.h>
 
 
 // Function deginitions 
@@ -12,10 +12,10 @@ int cpu_info(void);
 int cleanup(void);
 
 // GUI Functions 
-void greet(GtkWidget* widget, gpointer data);
+/*void greet(GtkWidget* widget, gpointer data);
 void destroy(GtkWidget* widget, gpointer data);
 int sub(int argc, char* argv[]);
-
+*/
 // Global Variables
 
 
@@ -27,7 +27,7 @@ int main(int argc, char* argv[]){
 	float wps;
 
 	// Cleans up the terminal 
-	system("clear");
+	/*system("clear");
 	
 	printf("Launch GUI?(N/y): ");
 	scanf("%s", gui);
@@ -35,7 +35,7 @@ int main(int argc, char* argv[]){
 	if((strcmp(gui, "y") == 0) || (strcmp(gui, "Y") == 0)){
 		sub(int argc, char* argv[]);
 	} 
-	
+	*/
 	system("clear");
 
 	// Builds terminal interface with 	

@@ -30,7 +30,27 @@ float test(int length){
 	float systemp, millideg;
 	FILE *thermal;
 	int n;
+	//FILE* thermal_zone0 = fopen("/sys/class/thermal/thermal_zone0/temp", "r");
+	//FILE* thermal_zone1 = fopen("/sys/class/thermal/thermal_zone1/temp", "r");
+	//FILE* thermal_zone2 = fopen("/sys/class/thermal/thermal_zone2/temp", "r");
+	//char thermal_file[100];
 
+	//fscanf(thermal_zone0,"%f",&millideg);
+	//systemp = millideg / 1000;
+
+	//if(systemp < 0){
+	//	FILE* thermal_zone1 = fopen("/sys/class/thermal/thermal_zone1/temp", "r");
+
+	//	fscanf(thermal_zone1,"%f",&millideg);
+	//	systemp = millideg / 1000;
+
+	//	thermal = thermal_zone1;
+	//	fclose(thermal_zone1);	
+	//}else{
+	//	thermal = thermal_zone0;
+	//	fclose(thermal_zone0);	
+	//}
+	
 	// Creates the test file
 	FILE* test_file = fopen(".inferno_test.txt", "w");
 
