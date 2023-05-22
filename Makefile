@@ -10,7 +10,7 @@ debug:
 build-rpm:
 	tar --create --file inferno-stress-test-0.0.7.tar.gz inferno-stress-test-0.0.7
 	mv inferno-stress-test-0.0.7.tar.gz ~/rpmbuild/SOURCES/
-	rpmbuild -ba ~/rpmbuild/SPECS/inferno.spec
+	rpmbuild -bs inferno.spec
 
 clean:
 	rm debug.out
