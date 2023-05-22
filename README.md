@@ -21,11 +21,7 @@ A simple non-graphical stress test application for testing systems through file 
 
 2. Change directory to the repository directory using `cd Inferno-Stress-Test`
 
-3. Using the `Install.sh` script, the executable will be copied to the `/usr/bin/` directory. 
-
-4. An uninstall script is also provided which removes the executable from that location `Uninstall.sh` 
-
-5. When updates are commited to github, you must run the `Uninstall.sh` and then reinstall using the `Install.sh` for changes to take affect. 
+3. Run the `make install` command which copies the executable to the `/usr/bin` directory
 
 ## How to use the Makefile
 
@@ -44,3 +40,7 @@ A simple non-graphical stress test application for testing systems through file 
 #### Clean:
 
 * The `make clean` command removes a `debug.out` executable if applicable 
+
+#### Install:
+
+* The `make install` command copies the `inferno-stress-test` executable to the `/usr/bin` directory 
