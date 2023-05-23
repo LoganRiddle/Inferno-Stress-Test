@@ -1,7 +1,7 @@
 Name:           inferno-stress-test
 Version:        0.0.7
 Release:        1%{?dist}
-Summary:        A simple stress test program for single core testing
+Summary:        A simple stress test program for system stressing and testing
 
 License:        GPL
 Source0:        %{name}-%{version}.tar.gz
