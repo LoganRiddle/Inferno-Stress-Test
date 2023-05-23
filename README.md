@@ -16,7 +16,7 @@ A simple non-graphical stress test application for testing systems through file 
 
 2. Using the yum package manager, just install the application with `yum install inferno-stress-test`.
 
-#### Ubuntu/Debian Based Systems Installation:
+#### Misc Linux Systems Installation:
 1. To install on Debian based systems, you must first clone the github repository using `git clone https://github.com/LoganRiddle/Inferno-Stress-Test`
 
 2. Change directory to the repository directory using `cd Inferno-Stress-Test`
