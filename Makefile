@@ -1,7 +1,7 @@
 version = 0.0.8
 
 finalize:
-	gcc ./src/inferno.c ./src/cpu.c ./src/cleanup.c ./src/test.c ./src/score.c -o ./inferno-stress-test-$(version)/inferno-stress-test
+	gcc ./src/inferno.c ./src/cpu.c ./src/cleanup.c ./src/test.c ./src/score.c -o ./inferno-stress-test-$(version)/inferno-stress-test 
 	@echo "Design Finalized, Increment Version Number as Applicable"
 
 debug:

@@ -40,6 +40,9 @@ int main(int argc, char* argv[]){
 
 	// Builds terminal interface with 	
 	printf("Welcome to Inferno\n");
+
+	cpu_info();
+
 	printf("\nChoose which test to run:\n");
 	printf("=========================\n");
 	printf("a.) (short) \nb.) (normal) \nc.) (extended)\n\n");
