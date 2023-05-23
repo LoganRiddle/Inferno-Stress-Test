@@ -34,11 +34,11 @@ float test(int length){
 	FILE* thermal_zone = fopen("/sys/class/thermal/thermal_zone0/temp", "r");
 		
 	// Creates the test file
-	FILE* test_file = fopen(".inferno_test.txt", "w");
+	FILE* test_file = fopen("/tmp/.inferno_test.txt", "w");
 
 	// Checks if the file exists or fails to open
 	if (test_file == NULL) {
-    		printf("Error: unable to open file test.txt\n");
+    		printf("Error: unable to open test file\n");
     		exit(EXIT_FAILURE);
   	}
 
@@ -62,7 +62,7 @@ float test(int length){
 
 	for(i = 0; i < test_length; i++) {
        		for(j = 1; j < test_length; j++) {
-			// Algorythm to stress the cpu with a 2D array
+		// Algorythm to stress the cpu with a 2D array
           		A[i][j] = ( A[i][j-1] + A[i][j] ) / 2;
   			time(&current);
 

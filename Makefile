@@ -1,4 +1,4 @@
-version = 0.0.7
+version = 0.0.8
 
 finalize:
 	gcc ./src/inferno.c ./src/cpu.c ./src/cleanup.c ./src/test.c ./src/score.c -o ./inferno-stress-test-$(version)/inferno-stress-test
@@ -10,7 +10,7 @@ debug:
 
 build-rpm:
 	tar --create --file inferno-stress-test-$(version).tar.gz inferno-stress-test-$(version)
-	#mv inferno-stress-test-0.0.7.tar.gz ~/rpmbuild/SOURCES/
+	mv inferno-stress-test-$(version).tar.gz ~/rpmbuild/SOURCES/
 	rpmbuild -bs inferno.spec
 
 source:

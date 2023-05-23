@@ -5,11 +5,11 @@
 int score(float wps){    
 	int count;
 
-	FILE* test_file = fopen(".inferno_test.txt", "r");	
+	FILE* test_file = fopen("/tmp/.inferno_test.txt", "r");	
 	
 	// Checks if the file exists or fails to open
 	if (test_file == NULL) {
-    		printf("Error: unable to open file test.txt\n");
+    		printf("Error: unable to open test file\n");
     		exit(EXIT_FAILURE);
   	}
 	
