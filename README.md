@@ -47,7 +47,7 @@ A simple non-graphical stress test application for testing systems through file 
 
 #### Build-rpm
 
-* The `make build-rpm` command generates a compressed source file and builds an SRPM which will be saved in the `rpmbuild/SRPM/` directory
+* The `make build-rpm` command generates a compressed source file and builds an SRPM which will be saved in the `rpmbuild/SRPMS/` directory
 
 #### Source
 
