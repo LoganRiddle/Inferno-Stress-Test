@@ -45,10 +45,10 @@ A simple non-graphical stress test application for testing systems through file 
 
 * The `make install` command copies the `inferno-stress-test` executable to the `/usr/bin` directory 
 
-#### Build-rpm
+#### Build-rpm:
 
 * The `make build-rpm` command generates a compressed source file and builds an SRPM which will be saved in the `rpmbuild/SRPMS/` directory
 
-#### Source
+#### Source:
 
 * The `make source` just generates the compressed source file for packaging
