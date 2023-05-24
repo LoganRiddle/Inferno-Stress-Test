@@ -1,11 +1,11 @@
-version = 0.0.8
+version = 0.0.9
 
 finalize:
-	gcc ./src/inferno.c ./src/cpu.c ./src/cleanup.c ./src/test.c ./src/score.c -o ./inferno-stress-test-$(version)/inferno-stress-test 
+	gcc ./src/inferno.c ./src/ui.c ./src/cleanup.c ./src/test.c ./src/score.c -o ./inferno-stress-test-$(version)/inferno-stress-test 
 	@echo "Design Finalized, Increment Version Number as Applicable"
 
 debug:
-	gcc ./src/inferno.c ./src/cpu.c ./src/cleanup.c ./src/test.c ./src/score.c -o debug.out 
+	gcc ./src/inferno.c ./src/ui.c ./src/cleanup.c ./src/test.c ./src/score.c -o debug.out 
 	@echo "debug.out ready to be run"
 
 build-rpm:
