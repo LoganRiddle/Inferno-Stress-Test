@@ -11,6 +11,7 @@ int score(float wps);
 //int cpu_info(void);
 int cleanup(void);
 int ui(void);
+int metrics(int final_score, float wps, int test_num);
 
 // GUI Functions 
 /*void greet(GtkWidget* widget, gpointer data);
@@ -23,10 +24,12 @@ int sub(int argc, char* argv[]);
 int main(int argc, char* argv[]){
 	char userin[100];
 	char rerun[100];
+	char save[100];
 	char gui[100];
 	int length = 0;
 	int final_score;
 	float wps;
+	int test_num = 0;
 
 	// Cleans up the terminal 
 	/*system("clear");
@@ -70,6 +73,18 @@ int main(int argc, char* argv[]){
 		printf("\nTest Score: %d\n", final_score);
 
 		cleanup();
+
+		test_num += 1;
+
+		// Consent to save resutls of the test
+		printf("Would you like to save the results? (y/n): ");
+		scanf("%s", save);
+		
+		if(strcmp(save, "y") == 0 || strcmp(save, "Y") ==  0 || strcmp(save, "yes") == 0 || strcmp(save, "Yes") == 0){
+			metrics(final_score, wps, test_num);
+		}else{
+			printf("Not saving.\n");
+		}
 
 		// Consent to rerun the test
 		printf("Run another test? (y/n): ");
