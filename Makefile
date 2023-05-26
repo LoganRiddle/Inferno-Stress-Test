@@ -11,6 +11,7 @@ debug:
 build-rpm:
 	tar --create --file inferno-stress-test-$(version).tar.gz inferno-stress-test-$(version)
 	mv inferno-stress-test-$(version).tar.gz ~/rpmbuild/SOURCES/
+	cp inferno.spec ~/rpmbuild/SPECS/
 	rpmbuild -bs inferno.spec
 
 source:
@@ -23,3 +24,6 @@ clean:
 
 install:
 	sudo cp ./inferno-stress-test-$(version)/inferno-stress-test /usr/bin/
+
+uninstall:
+	sudo rm /usr/bin/inferno-stress-test

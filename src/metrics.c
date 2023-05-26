@@ -5,16 +5,8 @@
 
 int metrics(int final_score, float wps, int test_num){
 	FILE* results_file = fopen("test_results.csv", "a");
-	char data[100]; 
 	char* header = "Run,Test Score,Writes Per Second,\n";
 	
-	/*strcat(data, itoa(test_num));
-	strcat(data, ",");
-	strcat(data, itoa(final_score));
-	strcat(data, ",");
-	strcat(data, ftoa(wps));
-	strcat(data, ",\n"); 
-	*/
 	if(test_num == 1){
 		fprintf(results_file, header);
 	}

@@ -10,8 +10,7 @@ int ui(void){
 	system("grep -m 1 'model name' /proc/cpuinfo");
 	printf("\nChoose which test to run:\n");
 	printf("=========================\n");
-	printf("a.) (short) \nb.) (normal) \nc.) (extended)\nq.) (quit)\n\n ");
-	
+	printf("a.) (short) \nb.) (normal) \nc.) (extended)\nq.) (quit)\n\n ");	
 
 	return 0;
 }

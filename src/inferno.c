@@ -42,7 +42,9 @@ int main(int argc, char* argv[]){
 	} 
 	*/
 	
+	// Infinite loop to continue to allow for testing until quick 	
 	while(1){
+		// User interface function to generate the cool stuff
 		ui();
 
 		// Takes user input
@@ -70,19 +72,23 @@ int main(int argc, char* argv[]){
 			exit(EXIT_FAILURE);
 		}
 		
-		printf("\nTest Score: %d\n", final_score);
+		// Final score
+		printf("\nTest Score: %d\n\n", final_score);
 
+		// Removed test file
 		cleanup();
 
+		// Increments test numbe
 		test_num += 1;
 
 		// Consent to save resutls of the test
 		printf("Would you like to save the results? (y/n): ");
 		scanf("%s", save);
 		
+		// Saving the metrics to the test_results.csv file
 		if(strcmp(save, "y") == 0 || strcmp(save, "Y") ==  0 || strcmp(save, "yes") == 0 || strcmp(save, "Yes") == 0){
 			metrics(final_score, wps, test_num);
-		}else{
+		{else{
 			printf("Not saving.\n");
 		}
 

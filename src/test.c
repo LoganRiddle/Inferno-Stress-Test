@@ -92,7 +92,7 @@ float test(int length){
 	// Pretty output for some different metrics
 	double awps = count/elapsed;
 	printf("\nAverage Write Speed: %.02f writes per second\n", awps);
-	printf("Short Test Ended Successfully\n");
+	printf("Short test ended successfully!\n");
 
 	return wps;
 }
