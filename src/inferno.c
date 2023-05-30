@@ -88,7 +88,7 @@ int main(int argc, char* argv[]){
 		// Saving the metrics to the test_results.csv file
 		if(strcmp(save, "y") == 0 || strcmp(save, "Y") ==  0 || strcmp(save, "yes") == 0 || strcmp(save, "Yes") == 0){
 			metrics(final_score, wps, test_num);
-		{else{
+		}else{
 			printf("Not saving.\n");
 		}
 
