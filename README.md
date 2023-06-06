@@ -1,6 +1,6 @@
 # Inferno-Stress-Test
 
-![alt text](https://github.com/LoganRiddle/Inferno-Stress-Test/blob/main/images/Screenshot%20from%202023-05-23%2011-28-26.png "App Image")
+![alt text](https://github.com/LoganRiddle/Inferno-Stress-Test/blob/main/images/Screenshot%20from%202023-06-06%2010-14-31.png "App Image")
 
 ## Description
 A simple non-graphical stress test application for testing systems through file writes. The build is currently very early on and is in development with plans to add a gui version as well. The application is entirely written in c and all code can be found withing the `/src/` directory. The test has a scoring system that relates time taken to complete the test to the number of lines written to the test file during the test. The test also displays core CPU tempature to the user to be monitored as needed. 
