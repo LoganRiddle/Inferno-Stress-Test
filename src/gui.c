@@ -7,13 +7,14 @@ static int counter = 0;
 void greet(GtkWidget* widget, gpointer data){
     // printf equivalent in GTK+
     g_print("Welcome to GTK\n");
-    g_print("%s clicked %d times\n",
-            (char*)data, ++counter);
+    g_print("%s clicked %d times\n", (char*)data, ++counter);
 }
+
   
 void destroy(GtkWidget* widget, gpointer data){
     gtk_main_quit();
 }
+
   
 int sub(int argc, char* argv[]){
     GtkWidget* window;
@@ -31,9 +32,7 @@ int sub(int argc, char* argv[]){
   
     button = gtk_button_new_with_label("Click Me!");
   
-    g_signal_connect(GTK_OBJECT(button),
-                     "clicked", G_CALLBACK(greet),
-                     "button");
+    g_signal_connect(GTK_OBJECT(button), "clicked", G_CALLBACK(greet), "button");
   
     gtk_container_add(GTK_CONTAINER(window), button);
   

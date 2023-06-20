@@ -1,5 +1,5 @@
 Name:           inferno-stress-test
-Version:        0.1.1
+Version:        0.1.2
 Release:        1%{?dist}
 Summary:        A simple stress test program for system stressing and testing
 
@@ -25,5 +25,5 @@ cp %{name} $RPM_BUILD_ROOT/%{_bindir}
 
 
 %changelog
-* Thu May 25 2023 Logan Riddle <motobecane28@vinces-mobile-station> - 0.1.1
-- Bug Fixes, prints cpu info
+* Tue Jun 20 2023 Logan Riddle <motobecane28@vinces-mobile-station> - 0.1.2
+- Bug Fixes, improved temp and write ratio

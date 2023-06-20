@@ -1,4 +1,4 @@
-version = 0.1.1
+version = 0.1.2
 
 finalize:
 	gcc ./src/inferno.c ./src/metrics.c ./src/ui.c ./src/cleanup.c ./src/test.c ./src/score.c -o ./inferno-stress-test-$(version)/inferno-stress-test 

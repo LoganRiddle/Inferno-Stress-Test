@@ -6,7 +6,7 @@
 #include <unistd.h>
 
 // Test size macro
-#define SZ 2500
+#define SZ 3500
 
 // Global Variables
 float A[SZ][SZ];
@@ -25,6 +25,7 @@ float test(int length){
 	double elapsed;
 	char str[100];
 	int test_length = 0;
+	int tick = 0;
 
 	// Temp related variables
 	float systemp, millideg;
@@ -62,9 +63,11 @@ float test(int length){
 
 	for(i = 0; i < test_length; i++) {
        		for(j = 1; j < test_length; j++) {
-		// Algorythm to stress the cpu with a 2D array
+			// Algorythm to stress the cpu with a 2D array
           		A[i][j] = ( A[i][j-1] + A[i][j] ) / 2;
   			time(&current);
+
+			tick += 1;		
 
     			// Calculate the elapsed time in seconds
    			elapsed = difftime(current, start);
@@ -72,12 +75,15 @@ float test(int length){
 			// Metric for user output
 			wps = count/elapsed;
 
-			// Reads CPU temps and presents it in celius 
-			thermal = fopen("/sys/class/thermal/thermal_zone0/temp","r");
-			n = fscanf(thermal,"%f",&millideg);
-			fclose(thermal);
-			systemp = millideg / 1000;
-
+			if(tick == 2){
+				// Reads CPU temps and presents it in celius 
+				thermal = fopen("/sys/class/thermal/thermal_zone0/temp","r");
+				n = fscanf(thermal,"%f",&millideg);
+				fclose(thermal);
+				systemp = millideg / 1000;
+				tick = 0;
+			}
+			
     			// Print the elapsed time
     			printf("Elapsed time: %.0f seconds. Write speed: %.02f writes per second. Current CPU Temp: %.02f Degrees Celsius\r", elapsed, wps, systemp);
 			fflush(stdout);

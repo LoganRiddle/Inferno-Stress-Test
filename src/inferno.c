@@ -39,8 +39,8 @@ int main(int argc, char* argv[]){
 
 	if((strcmp(gui, "y") == 0) || (strcmp(gui, "Y") == 0)){
 		sub(int argc, char* argv[]);
-	} 
-	*/
+	}*/
+	
 	
 	// Infinite loop to continue to allow for testing until quick 	
 	while(1){
